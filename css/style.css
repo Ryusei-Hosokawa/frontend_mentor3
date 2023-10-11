@@ -1,3 +1,10 @@
+@charset "utf-8";
 
+.main__borde {
+  width: 100%;
+  max-width: 1440px;
+  padding: 102px 15px 101px;
+  background: #E0E8FF;
+}
 
 /*# sourceMappingURL=style.css.map */
