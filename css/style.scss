@@ -1,8 +1,102 @@
 @charset "utf-8";
+@font-face {
+    font-family: "HankenGrotesk"; /* フォント名 */
+    src: url("../fonts/static/HankenGrotesk-Bold.ttf") format("woff");
+    src: url("../fonts/static/HankenGrotesk-ExtraBold.ttf") format("woff");
+    src: url("../fonts/static/HankenGrotesk-Medium.ttf") format("woff");
+}
 
-.main__borde {
+.main__board {
     width: 100%;
     max-width: 1440px;
     padding: 102px 15px 101px;
-    background: #E0E8FF;
+    background: #e0e8ff url(../img/pattern-background-desktop.svg) no-repeat 50% 0%;
+    margin: 100px auto;
+    .main__card {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 270px 48px 48px;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #fff url(../img/illustration-hero.svg) no-repeat 0% 0%;
+        box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+    }
+    .card {
+        &__ttl {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1em;
+            color: #1F2E55;
+            margin: 0 0 20px;
+        }
+        &__txt {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6em;
+            color: #1d1e35;
+            margin: 0 0 20px;
+        }
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background: #766CF1;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1em;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0 32px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 6px 6px 2px rgba(0, 0, 0, 0.1);
+            &:hover {
+                background: #9E97F3;
+            }
+        }
+        &__cancel {
+            display: block;
+            text-align: center;
+        }
+    }
+    .plan__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: #F7F9FF;
+        border-radius: 11px;
+        margin: 0 0 32px;
+        padding: 25px 24px;
+        &__cover {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        &__ttl {
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1em;
+            margin: 0 0 10px;
+            color: #1F2E55;
+        }
+        &__txt {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1em;
+            color: #717FA6;
+            margin: 0;
+        }
+        &__change {
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 1em;
+            color: #766CF1;
+            margin: 0;
+        }
+    }
 }
