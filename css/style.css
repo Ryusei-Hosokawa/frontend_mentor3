@@ -1,41 +1,70 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "HankenGrotesk"; /* フォント名 */
-  src: url("../fonts/static/HankenGrotesk-Bold.ttf") format("woff");
-  src: url("../fonts/static/HankenGrotesk-ExtraBold.ttf") format("woff");
-  src: url("../fonts/static/HankenGrotesk-Medium.ttf") format("woff");
+  font-family: "Red Hat Display"; /* フォント名 */
+  src: url("../font/RedHatDisplay-VariableFont_wght.ttf") format("woff");
 }
 .main__board {
+  font-family: "Red Hat Display";
   width: 100%;
   max-width: 1440px;
-  padding: 102px 15px 101px;
+  padding: 102px 24px 101px;
   background: #e0e8ff url(../img/pattern-background-desktop.svg) no-repeat 50% 0%;
   margin: 100px auto;
+}
+@media screen and (max-width: 767px) {
+  .main__board {
+    background: #e0e8ff url(../img/pattern-background-mobile.svg) no-repeat 50% 0%/100% 27.3%;
+    padding: 71px 24px;
+  }
 }
 .main__board .main__card {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 270px 48px 48px;
+  padding: 0 48px 48px;
   border-radius: 20px;
   overflow: hidden;
-  background: #fff url(../img/illustration-hero.svg) no-repeat 0% 0%;
+  background: #fff;
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+@media screen and (max-width: 767px) {
+  .main__board .main__card {
+    padding: 0 24px 48px;
+  }
+}
+.main__board .main__card .img__cover {
+  margin: 0 -48px 45px;
+}
+@media screen and (max-width: 767px) {
+  .main__board .main__card .img__cover {
+    margin: 0 -24px 40px;
+  }
 }
 .main__board .card__ttl {
   text-align: center;
   font-size: 28px;
   font-weight: 900;
   line-height: 1em;
-  color: #1F2E55;
+  color: #1f2e55;
   margin: 0 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .main__board .card__ttl {
+    font-size: 22px;
+  }
 }
 .main__board .card__txt {
   text-align: center;
   font-size: 16px;
   line-height: 1.6em;
-  color: #1d1e35;
+  color: #717fa6;
   margin: 0 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .main__board .card__txt {
+    font-size: 15px;
+    margin: 0 0 30px;
+  }
 }
 .main__board .card__btn {
   display: flex;
@@ -43,7 +72,7 @@
   align-items: center;
   width: 100%;
   height: 50px;
-  background: #766CF1;
+  background: #382ae1;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 900;
@@ -54,22 +83,48 @@
   transition: all 0.3s ease;
   box-shadow: 0px 6px 6px 2px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 767px) {
+  .main__board .card__btn {
+    max-width: 279px;
+    font-size: 15px;
+    margin: 0 auto 32px;
+  }
+}
 .main__board .card__btn:hover {
-  background: #9E97F3;
+  background: #766cf1;
 }
 .main__board .card__cancel {
   display: block;
   text-align: center;
+  font-size: 15px;
+  font-weight: 900;
+  color: #717fa6;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .main__board .card__cancel {
+    font-size: 15px;
+  }
+}
+.main__board .card__cancel:hover {
+  color: #1f2e55;
 }
 .main__board .plan__label {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #F7F9FF;
+  background: #f7f9ff;
   border-radius: 11px;
   margin: 0 0 32px;
   padding: 25px 24px;
+}
+@media screen and (max-width: 767px) {
+  .main__board .plan__label {
+    max-width: 279px;
+    margin: 0 auto 24px;
+    padding: 17px 17px 16px;
+  }
 }
 .main__board .plan__label__cover {
   display: flex;
@@ -81,21 +136,42 @@
   font-weight: 900;
   line-height: 1em;
   margin: 0 0 10px;
-  color: #1F2E55;
+  color: #1f2e55;
+}
+@media screen and (max-width: 767px) {
+  .main__board .plan__label__ttl {
+    font-size: 15px;
+  }
 }
 .main__board .plan__label__txt {
   font-size: 16px;
   font-weight: 500;
   line-height: 1em;
-  color: #717FA6;
+  color: #717fa6;
   margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .main__board .plan__label__txt {
+    font-size: 15px;
+  }
 }
 .main__board .plan__label__change {
   font-size: 14px;
   font-weight: 900;
   line-height: 1em;
-  color: #766CF1;
+  color: #382ae1;
   margin: 0;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .main__board .plan__label__change {
+    font-size: 13px;
+  }
+}
+.main__board .plan__label__change:hover {
+  color: #766cf1;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
